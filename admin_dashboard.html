@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | ADMARC Digital System</title>
+  <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="js/admin.js"></script>
+</head>
+<!-- Notification Container -->
+<div id="notification-container"></div>
+
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-logo">ADMARC Admin Dashboard</div>
+  <ul class="nav-links">
+    <li><a href="admin_dashboard.html" class="active">Overview</a></li>
+    <li><a href="admin_depots.html">Depots</a></li>
+    <li><a href="admin_users.html">Users</a></li>
+    <li><a href="admin_reports.html">Reports</a></li>
+    <li><a href="admin_settings.html">Settings</a></li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</nav>
+
+  <!-- Top Summary Cards -->
+  <section class="dashboard-header">
+    <div class="stat-card">
+      <h2>42</h2>
+      <p>Total Depots</p>
+    </div>
+    <div class="stat-card">
+      <h2>18,250</h2>
+      <p>Active Tokens</p>
+    </div>
+    <div class="stat-card">
+      <h2>MK 245M</h2>
+      <p>Total Sales</p>
+    </div>
+    <div class="stat-card">
+      <h2>7</h2>
+      <p>Pending Reports</p>
+    </div>
+  </section>
+
+  <!-- Analytics Section -->
+  <section class="admin-analytics">
+    <div class="chart-panel">
+      <h3>Stock Distribution by Depot</h3>
+      <canvas id="stockChart"></canvas>
+    </div>
+    <div class="chart-panel">
+      <h3>Token Activity Trends</h3>
+      <canvas id="tokenChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Recent Activity Table -->
+  <section class="recent-activity">
+    <h3>Recent System Logs</h3>
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>User</th>
+          <th>Action</th>
+          <th>Depot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>04-Nov-2025</td>
+          <td>Staff (Livingstonia)</td>
+          <td>Verified Token #ADM123</td>
+          <td>Livingstonia</td>
+        </tr>
+        <tr>
+          <td>04-Nov-2025</td>
+          <td>Admin</td>
+          <td>Updated Stock Levels</td>
+          <td>Rumphi</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ADMARC Digital System — Admin Panel</p>
+  </footer>
+
+</body>
+</html>

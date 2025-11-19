@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Registration | ADMARC</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/register.js"></script>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2>Citizen Registration</h2>
+      <p>Create your ADMARC account</p>
+
+      <form id="registerForm">
+        <div class="input-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="e.g. Christopher Ng’oma" required>
+        </div>
+
+        <div class="input-group">
+          <label for="nid">National ID</label>
+          <input type="text" id="nid" placeholder="e.g. MW12345678" required>
+        </div>
+
+        <div class="input-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="e.g. +265999000111" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Create Password</label>
+          <input type="password" id="password" placeholder="Minimum 8 characters" required>
+        </div>
+
+        <div class="input-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+        </div>
+
+        <button type="submit" class="btn full-width">Register</button>
+        <p class="switch-text">Already have an account? <a href="login.html">Login</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

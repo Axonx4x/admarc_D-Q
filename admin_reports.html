@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reports | ADMARC Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">ADMARC Admin Dashboard</div>
+    <ul class="nav-links">
+      <li><a href="admin_dashboard.html">Overview</a></li>
+      <li><a href="admin_depots.html">Depots</a></li>
+      <li><a href="admin_users.html">Users</a></li>
+      <li><a href="admin_reports.html" class="active">Reports</a></li>
+      <li><a href="admin_settings.html">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h2>Reports & Analytics</h2>
+    <p>View and export system reports, stock movement, and sales analytics.</p>
+  </section>
+
+  <div class="report-card-grid">
+    <div class="report-card">
+      <h3>Monthly Stock Report</h3>
+      <p>Summary of stock inflow/outflow by depot.</p>
+      <button class="btn success">Download PDF</button>
+    </div>
+
+    <div class="report-card">
+      <h3>Token Issuance Log</h3>
+      <p>Record of all queue tokens generated in the system.</p>
+      <button class="btn success">Export CSV</button>
+    </div>
+
+    <div class="report-card">
+      <h3>Revenue Overview</h3>
+      <p>Sales summary for the current quarter.</p>
+      <button class="btn success">View Chart</button>
+    </div>
+  </div>
+
+  <!-- optional chart area -->
+  <section class="admin-analytics">
+    <div class="chart-panel">
+      <h3>Depot Sales</h3>
+      <canvas id="reportsChart"></canvas>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ADMARC Digital System — Admin Reports</p>
+  </footer>
+
+  <!-- Notification container (admin.js will also create if missing) -->
+  <div id="notification-container"></div>
+
+</body>
+</html>

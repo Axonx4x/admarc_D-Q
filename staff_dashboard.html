@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staff Dashboard | ADMARC Digital System</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/staff.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">ADMARC Staff Dashboard</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Dashboard</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard Summary Cards -->
+  <section class="dashboard-header">
+    <div class="stat-card">
+      <h2>780</h2>
+      <p>Total Tokens Verified</p>
+    </div>
+    <div class="stat-card">
+      <h2>450</h2>
+      <p>Active Queue Tokens</p>
+    </div>
+    <div class="stat-card">
+      <h2>35</h2>
+      <p>Stock Items Available</p>
+    </div>
+  </section>
+
+  <!-- Split Panels -->
+  <section class="dashboard-panels">
+
+    <!-- Left Panel: Token Verification -->
+    <div class="panel left-panel">
+      <h2>Queue Token Verification</h2>
+      <form id="verifyForm" class="verify-form">
+        <div class="input-group">
+          <label>Enter Token Code</label>
+          <input type="text" id="tokenInput" placeholder="e.g. ADM123456" required />
+        </div>
+        <button type="submit" class="btn full-width">Verify Token</button>
+      </form>
+
+      <div id="verificationResult" class="verify-result hidden">
+        <h3>Verification Result</h3>
+        <p><strong>Token:</strong> <span id="tokenDisplay"></span></p>
+        <p><strong>Citizen:</strong> <span id="citizenName"></span></p>
+        <p><strong>Commodity:</strong> <span id="commodityName"></span></p>
+        <p><strong>Status:</strong> <span id="statusText" class="status-text"></span></p>
+        <button id="confirmCollection" class="btn full-width">Confirm Collection</button>
+      </div>
+    </div>
+
+    <!-- Right Panel: Stock Overview -->
+    <div class="panel right-panel">
+      <h2>Depot Stock Overview</h2>
+      <table class="stock-table">
+        <thead>
+          <tr>
+            <th>Commodity</th>
+            <th>Stock (Bags)</th>
+            <th>Unit Price (MK)</th>
+            <th>Last Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maize (50kg)</td>
+            <td>250</td>
+            <td>25,000</td>
+            <td>02 Nov 2025</td>
+          </tr>
+          <tr>
+            <td>Beans (25kg)</td>
+            <td>120</td>
+            <td>20,000</td>
+            <td>01 Nov 2025</td>
+          </tr>
+          <tr>
+            <td>Rice (25kg)</td>
+            <td>90</td>
+            <td>18,000</td>
+            <td>03 Nov 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ADMARC Digital System — Staff Panel</p>
+  </footer>
+
+</body>
+</html>

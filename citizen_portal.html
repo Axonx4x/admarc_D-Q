@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Citizen Portal | ADMARC Digital System</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/citizen.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">ADMARC Portal</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">My Queue</a></li>
+      <li><a href="#">Transactions</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <section class="portal-container">
+    <h1>Available Commodities</h1>
+    <div class="cards-container">
+
+      <div class="card">
+        <img src="assets/maize.png" alt="Maize" />
+        <h3>Maize (50kg)</h3>
+        <p>Stock: <span class="stock">250</span> bags</p>
+        <p>Price: <strong>MK 25,000</strong></p>
+        <button class="buy-btn" data-item="Maize">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/beans.png" alt="Beans" />
+        <h3>Beans (25kg)</h3>
+        <p>Stock: <span class="stock">120</span> bags</p>
+        <p>Price: <strong>MK 20,000</strong></p>
+        <button class="buy-btn" data-item="Beans">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/rice.png" alt="Rice" />
+        <h3>Rice (25kg)</h3>
+        <p>Stock: <span class="stock">90</span> bags</p>
+        <p>Price: <strong>MK 18,000</strong></p>
+        <button class="buy-btn" data-item="Rice">Buy Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Purchase Modal -->
+  <div id="purchaseModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Purchase Commodity</h2>
+
+      <form id="purchaseForm">
+        <div class="input-group">
+          <label for="citizenName">Full Name</label>
+          <input type="text" id="citizenName" required />
+        </div>
+
+        <div class="input-group">
+          <label for="nationalId">National ID</label>
+          <input type="text" id="nationalId" maxlength="12" required />
+        </div>
+
+        <div class="input-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" min="1" required />
+        </div>
+
+        <div class="input-group">
+          <label for="paymentMode">Payment Mode</label>
+          <select id="paymentMode" required>
+            <option value="">Select Mode</option>
+            <option value="Airtel Money">Airtel Money</option>
+            <option value="TNM Mpamba">TNM Mpamba</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn">Confirm Purchase</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirmation Section -->
+  <div id="confirmationBox" class="confirmation">
+    <h2>Transaction Successful!</h2>
+    <p>Your Queue Token: <strong id="tokenCode"></strong></p>
+    <p>Collection Time: <strong id="collectionTime"></strong></p>
+    <button id="closeConfirmation" class="btn">Close</button>
+  </div>
+
+</body>
+</html>

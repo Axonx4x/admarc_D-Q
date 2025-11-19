@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Management | ADMARC Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/admin.js"></script>
+</head>
+<!-- Notification Container -->
+<div id="notification-container"></div>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">ADMARC Admin Dashboard</div>
+    <ul class="nav-links">
+      <li><a href="admin_dashboard.html">Overview</a></li>
+      <li><a href="admin_depots.html">Depots</a></li>
+      <li><a href="admin_users.html" class="active">Users</a></li>
+      <li><a href="admin_reports.html">Reports</a></li>
+      <li><a href="admin_settings.html">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h2>User Management</h2>
+    <p>Manage roles, approvals, and user access across ADMARC Digital System.</p>
+  </section>
+
+  <!-- Action Bar -->
+  <div class="action-bar">
+    <input type="text" placeholder="Search users..." id="searchUser">
+    <button class="btn success">+ Add User</button>
+  </div>
+
+  <!-- User Table -->
+  <section class="admin-table-section">
+    <table class="stock-table user-table">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Christopher Ng’oma</td>
+          <td>christopher@admarc.mw</td>
+          <td>Admin</td>
+          <td><span class="status green">Active</span></td>
+          <td>
+            <button class="btn small danger">Suspend</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Chikondi Phiri</td>
+          <td>chikondi@admarc.mw</td>
+          <td>Committee Member</td>
+          <td><span class="status orange">Pending</span></td>
+          <td>
+            <button class="btn small success">Approve</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Thokozani Banda</td>
+          <td>thokozani@admarc.mw</td>
+          <td>Staff</td>
+          <td><span class="status green">Active</span></td>
+          <td>
+            <button class="btn small danger">Suspend</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ADMARC Digital System — Admin Panel</p>
+  </footer>
+
+  <!-- Notifications -->
+  <div id="notification-container"></div>
+
+</body>
+</html>

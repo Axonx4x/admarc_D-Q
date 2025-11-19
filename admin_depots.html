@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Depots | ADMARC Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<!-- Notification Container -->
+<div id="notification-container"></div>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">ADMARC Admin Dashboard</div>
+    <ul class="nav-links">
+      <li><a href="admin_dashboard.html">Overview</a></li>
+      <li><a href="admin_depots.html" class="active">Depots</a></li>
+      <li><a href="admin_users.html">Users</a></li>
+      <li><a href="admin_reports.html">Reports</a></li>
+      <li><a href="admin_settings.html">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h2>Depot Management</h2>
+    <p>Monitor stock, performance, and operational status across all ADMARC depots.</p>
+  </section>
+
+  <section class="admin-table-section">
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th>Depot Name</th>
+          <th>District</th>
+          <th>Stock (Bags)</th>
+          <th>Status</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Livingstonia</td>
+          <td>Rumphi</td>
+          <td>250</td>
+          <td><span class="status green">Normal</span></td>
+          <td>04-Nov-2025</td>
+        </tr>
+        <tr>
+          <td>Mkanda</td>
+          <td>Mzimba</td>
+          <td>70</td>
+          <td><span class="status orange">Low Stock</span></td>
+          <td>04-Nov-2025</td>
+        </tr>
+        <tr>
+          <td>Rumphi Central</td>
+          <td>Rumphi</td>
+          <td>15</td>
+          <td><span class="status red">Critical</span></td>
+          <td>03-Nov-2025</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ADMARC Digital System — Admin Panel</p>
+  </footer>
+
+</body>
+</html>

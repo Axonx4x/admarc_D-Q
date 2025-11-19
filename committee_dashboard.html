@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Committee Dashboard | ADMARC Digital System</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/committee.js"></script>
+</head>
+<body>
+
+ 
+
+  <!-- Dashboard Overview -->
+  <nav class="navbar">
+  <div class="nav-logo">ADMARC Committee Dashboard</div>
+  <ul class="nav-links">
+    <li><a href="committee_dashboard.html" class="active">Overview</a></li>
+    <li><a href="#">Reports</a></li>
+    <li><a href="#">Complaints</a></li>
+   <li>
+  <a href="committee_chat.html" id="forumLink">
+    Forum <span class="badge" id="forumBadge">3</span>
+  </a>
+</li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Depot Summary -->
+  <section class="committee-section">
+    <h1>Depot Summary</h1>
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th>Depot</th>
+          <th>Commodity</th>
+          <th>Available Stock</th>
+          <th>Tokens Issued</th>
+          <th>Collections Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Livingstonia Depot</td>
+          <td>Maize (50kg)</td>
+          <td>230</td>
+          <td>410</td>
+          <td>395</td>
+        </tr>
+        <tr>
+          <td>Rumphi Depot</td>
+          <td>Beans (25kg)</td>
+          <td>180</td>
+          <td>270</td>
+          <td>258</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Report Submission Form -->
+  <section class="committee-section">
+    <h1>Report Irregularities</h1>
+    <form id="reportForm" class="report-form">
+      <div class="input-group">
+        <label for="officerName">Reported Officer/Staff Name</label>
+        <input type="text" id="officerName" placeholder="Enter full name" required />
+      </div>
+
+      <div class="input-group">
+        <label for="incidentType">Incident Type</label>
+        <select id="incidentType" required>
+          <option value="">Select Type</option>
+          <option value="Corruption">Corruption</option>
+          <option value="Favoritism">Favoritism</option>
+          <option value="Stock Mismanagement">Stock Mismanagement</option>
+          <option value="Queue Manipulation">Queue Manipulation</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="details">Description</label>
+        <textarea id="details" rows="4" placeholder="Describe the incident briefly..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Submit Report</button>
+    </form>
+
+    <div id="reportMessage" class="confirmation">
+      <h2>Report Submitted Successfully!</h2>
+      <p>Thank you for helping maintain transparency and fairness.</p>
+      <button id="closeReport" class="btn">Close</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ADMARC Digital System — Committee Panel</p>
+  </footer>
+
+</body>
+</html>

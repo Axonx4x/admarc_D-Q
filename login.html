@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADMARC Digital System | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/login.js"></script>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2>ADMARC Digital System</h2>
+      <p>Access your account</p>
+      <p class="switch-text">Are you the Admin? <a href="admin_login.html">Login here</a></p>
+
+
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="role">Select Role</label>
+          <select id="role" required>
+            <option value="">-- Select Role --</option>
+            <option value="admin">Admin</option>
+            <option value="staff">Staff</option>
+            <option value="committee">Committee Member</option>
+            <option value="citizen">Citizen</option>
+          </select>
+        </div>
+
+        <div id="emailField" class="input-group hidden">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="e.g. example@admarc.mw">
+        </div>
+
+        <div id="idField" class="input-group hidden">
+          <label for="nationalId">National ID</label>
+          <input type="text" id="nationalId" placeholder="e.g. MW12345678">
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="remember-group">
+          <label><input type="checkbox" id="rememberMe"> Remember me</label>
+          <a href="#" id="forgotLink">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn full-width">Login</button>
+
+        <p class="switch-text">
+          Don’t have an account? <a href="register.html">Register as a Citizen</a>
+        </p>
+      </form>
+
+      <p class="auth-footer">© 2025 ADMARC Digital System</p>
+    </div>
+  </div>
+</body>
+</html>

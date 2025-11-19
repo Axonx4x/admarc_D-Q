@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Committee Forum | ADMARC Digital System</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/chat.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+  <div class="nav-logo">ADMARC Committee Dashboard</div>
+  <ul class="nav-links">
+    <li><a href="committee_dashboard.html">Overview</a></li>
+    <li><a href="#">Reports</a></li>
+    <li><a href="#">Complaints</a></li>
+   <li>
+  <a href="committee_chat.html" id="forumLink">
+    Forum <span class="badge" id="forumBadge">3</span>
+  </a>
+</li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Chat Container -->
+  <section class="chat-container">
+    <div class="chat-header">
+      <h2>Community Committee Forum</h2>
+      <p>Engage with fellow members to promote transparency and smooth ADMARC operations.</p>
+    </div>
+
+    <div class="chat-window" id="chatBox">
+      <div class="message received">
+        <div class="avatar">SA</div>
+        <div class="bubble">
+          <div class="sender">System Admin</div>
+          <div class="text">Welcome to the ADMARC Committee Forum. Keep discussions respectful and issue-focused.</div>
+          <div class="time">08:00 AM</div>
+        </div>
+      </div>
+
+      <div class="message received">
+        <div class="avatar">CH</div>
+        <div class="bubble">
+          <div class="sender">Chikondi (Member)</div>
+          <div class="text">Morning team, any update from Livingstonia depot today?</div>
+          <div class="time">08:05 AM</div>
+        </div>
+      </div>
+    </div>
+
+    <form id="chatForm" class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Type your message..." required />
+      <button type="submit" class="chat-send-btn">Send</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ADMARC Digital System — Committee Forum</p>
+  </footer>
+
+</body>
+</html>
